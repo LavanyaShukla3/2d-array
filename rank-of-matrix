@@ -1,0 +1,27 @@
+class Main{
+    public static void main(String[] args){
+        int[][] a = {{1,2,3},
+                    {2,1,4},
+                    {3,0,5}};
+                   
+           
+            //int trans1[][] = new int [3][2];
+           
+            for(int i = 0; i< a.length; i++){
+                int diff = 0;
+                int diff2 = 0;
+                int diff3 = 0;
+                for(int j = 0; j< a[0].length; j++){
+                    diff = a[1][j] - a[0][j]; //R2 → R2 – 2R1
+
+                    diff2 = a[2][j] - a[1][j];  //R3 → R3 – 3R1
+                    diff3= a[2][j] - diff2; //R3 → R3 – 2R2
+                }
+                System.out.println(diff3);
+            }
+               
+            //System.out.println(diff);
+            //System.out.println(diff2);
+            //System.out.println(diff3);
+    }
+}
