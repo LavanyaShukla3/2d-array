@@ -6,14 +6,19 @@ public class lav_dgnl_sum{
                     {3,2,9}};
                     
         
+        //In sum1,we only need one loop for diagonal, as we are only accessing a[i][i]; so just the loop for i.
         
         int sum1 = 0;
         for(int i = 0; i< a.length; i++){
-            sum1 += a[i][i];            
+            sum1 += a[i][i]; 
+            System.out.println(sum1);
         }
-        System.out.println(sum1);
+        
         
         // sum for other diagonal
+        
+        // sum2 we need one loop with conditions on both i and j, i goes from 0 to n-1, while j goes from n-1 to 0
+        
         int sum2 = 0;
         for(int i = 0, j = (a[0].length-1); i<a.length && j>=0; i++, j--){
             sum2 += a[i][j];
