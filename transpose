@@ -15,19 +15,21 @@ public class Arrays {
           System.out.println("The transpose is : ");
           
        //Another method 
-         int[][] a_tran = new int[n][m];
-
-        for(int i = 0; i<a.length; i++){
-            for(int j = 0; j<a[0].length; j++){
-                a_tran[j][i] = a[i][j];
-            }
-        }
+         int[][] a_tran = new int[m][n];
 
         for(int i = 0; i<a_tran.length; i++){
             for(int j = 0; j<a_tran[0].length; j++){
-                System.out.print(a_tran[i][j] + " ");
+                a_tran[j][i] = matrix[i][j];
             }
-             System.out.println();
+        }
+
+        
+        for(int i = 0; i<a_tran.length; i++){
+            for(int j = 0; j<a_tran[0].length; j++){
+                System.out.print(a_tran[j][i] + "  ");
+            }
+            System.out.println();
+        }
         }
         //
        
